@@ -1,7 +1,7 @@
 {
   "name": "boilerplate",
   "version": "0.0.1",
-  "description": "Like MEAN stack application boilerplate",
+  "description": "MEANスタック向きなboilerplate",
   "scripts": {
     "build": "$(npm bin)/gulp build",
     "watch": "$(npm bin)/gulp watch",
