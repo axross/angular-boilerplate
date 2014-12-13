@@ -1,0 +1,9 @@
+# Ignore unnecessary cache files.
+.DS_Store
+/node_modules
+
+# Ignore generated files.
+/public/dist/**/bundle.*
+
+# Ignore log files
+npm-debug.log
