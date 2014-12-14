@@ -1,6 +1,6 @@
 'use strict';
 
-var angular = window.angular;
+var angular = require('angular');
 var app     = angular.module('boilerplate', ['ui.router']);
 
 require('./controllers/index')(app);
@@ -29,8 +29,8 @@ app.controller('rootCtrl', [
   '$log',
   function($rootScope, $log) {
     $rootScope.$on('$stateChangeSuccess', function(e, toState, toParams) {
-      $log.info('State changed : ', toState);
-      $log.info('State params : ',  toParams);
+      $log.debug('State changed : ', toState);
+      $log.debug('State params : ',  toParams);
     });
 
     $rootScope.$on('FinishedAllProcesses', function() {

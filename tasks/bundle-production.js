@@ -17,7 +17,7 @@ var task = { config: config };
 task.js = function() {
   gulp.src(config.js.src)
     .pipe(plumber())
-    .pipe(webpack())
+    .pipe(webpack(config.js.webpack))
     .pipe(uglify())
     .pipe(rename(config.js.bundleFilename))
     .pipe(gulp.dest(config.js.dest));

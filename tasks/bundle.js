@@ -10,7 +10,13 @@ var config = {
     watch:               './public/javascripts/**/*.js',
     src:                 './public/javascripts/app.js',
     dest:                './public/dist',
-    bundleFilename:      'bundle.js'
+    bundleFilename:      'bundle.js',
+    webpack: {
+      module: {
+        loaders: []
+      },
+      externals: { 'angular': 'angular' },
+    }
   },
   css: {
     watch:               './public/stylesheets/**/*.less',
@@ -26,7 +32,7 @@ var task = { config: config };
 task.js = function() {
   gulp.src(config.js.src)
   .pipe(plumber())
-  .pipe(webpack())
+  .pipe(webpack(config.js.webpack))
   .pipe(rename(config.js.bundleFilename))
   .pipe(gulp.dest(config.js.dest));
 };
