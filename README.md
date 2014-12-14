@@ -1,4 +1,4 @@
-# boilerplate
+# angular-boilerplate
 
 MEANスタック向きなboilerplateです。
 
